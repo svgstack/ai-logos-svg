@@ -1,0 +1,212 @@
+:root {
+    --primary-bg: #fff;
+    --card-bg: #f1f1f1;
+    --text-primary: #222;
+    --text-secondary: #222;
+    --accent: #a63aff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-transform: translateY(-5px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.containers {
+    max-width: 940px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header {
+    background: #f1f1f1;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.content {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+}
+
+.icon-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 15px;
+    background: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.icon-image:hover {
+    transform: scale(1.05);
+}
+
+.info-section {
+    flex: 1;
+}
+
+.icon-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.icon-description {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.download-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.download-btn:first-child {
+    background: #25ca6f;
+}
+.download-btn:last-child {
+    background: #8b43ff;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+}
+
+.download-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.download-links a {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .icon-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .icon-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .icon-description {
+        text-align: center;
+    }
+}
+
+
+
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid #f1f1f1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    height: 125px;
+}
+
+.card-img-container img {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.card-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: var(--accent);
+}
+
+.card-link {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.35rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.card-link:hover {
+    background-color: #000;
+}
